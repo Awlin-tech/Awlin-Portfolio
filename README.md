@@ -1,4 +1,4 @@
-# Awlin Sajan — Developer Portfolio
+# Awlin Sajan — Portfolio
 
 Personal portfolio website for **Awlin Sajan**, a B.Tech Computer Science and Engineering student at Rajagiri School of Engineering and Technology (RSET), Kochi, showcasing education, technical skills, featured engineering work, internships, certificates, and an interactive AI Q&A assistant.
 
