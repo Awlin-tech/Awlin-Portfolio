@@ -187,8 +187,8 @@ async function startServer() {
 
       const attemptModels =
         mode === 'fast'
-          ? [ALLOWED_MODELS.fast, ALLOWED_MODELS.balanced]
-          : [ALLOWED_MODELS.balanced, ALLOWED_MODELS.fast];
+          ? [ALLOWED_MODELS.fast, ALLOWED_MODELS.balanced, 'gemini-3.8-flash']
+          : [ALLOWED_MODELS.balanced, ALLOWED_MODELS.fast, 'gemini-3.8-flash'];
 
       let activeModel = model;
       let response;
