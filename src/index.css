@@ -1,0 +1,93 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-sans: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root {
+  color-scheme: light;
+  --bg-primary: #F8FAFC;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #F1F5F9;
+  --bg-input: #F8FAFC;
+  --accent-primary: #2563EB;
+  --accent-primary-hover: #1D4ED8;
+  --accent-on-primary: #FFFFFF;
+  --accent-secondary: #6D28D9;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --border-subtle: rgba(15, 23, 42, 0.10);
+  --border-strong: rgba(15, 23, 42, 0.22);
+  --border-hover: rgba(37, 99, 235, 0.40);
+  --header-scrolled-bg: rgba(248, 250, 252, 0.88);
+  --modal-backdrop: rgba(15, 23, 42, 0.45);
+  --scrollbar-thumb: rgba(15, 23, 42, 0.18);
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-primary: #0B0D12;
+  --bg-secondary: #121620;
+  --bg-card: #161B25;
+  --bg-input: #0B0D12;
+  --accent-primary: #8EAFFF;
+  --accent-primary-hover: #A6C1FF;
+  --accent-on-primary: #0B0D12;
+  --accent-secondary: #B6A2FF;
+  --text-primary: #F4F5F7;
+  --text-secondary: #A0A7B4;
+  --border-subtle: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --border-hover: rgba(142, 175, 255, 0.40);
+  --header-scrolled-bg: rgba(11, 13, 18, 0.85);
+  --modal-backdrop: rgba(11, 13, 18, 0.80);
+  --scrollbar-thumb: rgba(255, 255, 255, 0.14);
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  letter-spacing: 0.005em;
+  overflow-x: clip;
+}
+
+/* Subtle architectural noise overlay */
+.bg-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+/* Custom sleek scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}

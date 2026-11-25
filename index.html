@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awlin Sajan — Computer Science Student &amp; Aspiring Software Developer</title>
+    <meta
+      name="description"
+      content="Personal developer portfolio of Awlin Sajan, a Computer Science and Engineering student passionate about software development, problem solving, and building meaningful digital products."
+    />
+    <meta property="og:title" content="Awlin Sajan — Computer Science Student &amp; Aspiring Software Developer" />
+    <meta
+      property="og:description"
+      content="Personal developer portfolio of Awlin Sajan, a Computer Science and Engineering student passionate about software development, problem solving, and building meaningful digital products."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0B0D12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..600;1,9..40,400&family=JetBrains+Mono:wght@400;500&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('portfolio-theme');
+          var isLight = saved === 'light';
+          document.documentElement.classList.toggle('dark', !isLight);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased selection:bg-[var(--accent-primary)]/20 selection:text-[var(--text-primary)] transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
